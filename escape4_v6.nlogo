@@ -11,7 +11,6 @@ patches-own [
 to load-plan-file
   set listax []
   set listay []
-    ask patches with [pcolor = 45] [set listax lput pxcor listax set listay lput pycor listay]
   let file "school.plan"
   if ( file != false ) ;; if file exists
   [
@@ -28,6 +27,8 @@ to load-plan-file
   clear-turtles
   set door-data []
   show-plan
+    ask patches with [pcolor = 64 and (count other patches in-radius 1 with [pcolor = black]) = 1 and (count other patches in-radius 1 with [pcolor = 2]) = 1 ][set listax lput pxcor listax
+    set listay lput pycor listay]
 end
 
 
@@ -177,9 +178,6 @@ end
 ;; --------------------------------------------------------
 ;; --------------------------------------------------------
 ;; --------------------------------------------------------
-
-
-
 
 
 
