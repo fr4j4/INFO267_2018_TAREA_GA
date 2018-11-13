@@ -1,4 +1,4 @@
-globals [ patch-data door-data listax listay]
+globals [ patch-data door-data listax listay plan-data]
 
 ;; variables for patches (tiles on the floor)
 patches-own [
@@ -11,7 +11,7 @@ patches-own [
 to load-plan-file
   set listax []
   set listay []
-  let file "school.plan"
+  let file plan-data
   if ( file != false ) ;; if file exists
   [
     set patch-data [] ;;
@@ -178,7 +178,6 @@ end
 ;; --------------------------------------------------------
 ;; --------------------------------------------------------
 ;; --------------------------------------------------------
-
 
 
 
