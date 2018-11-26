@@ -32,6 +32,7 @@ netlogo = None
 import platform
 import pyNetLogo
 import random
+import numpy as np
 
 netlogo_gui=False #ejecutar netlogo con interfaz grafica (True = si, False = no)
 current_gen = 0 #contador de la generación actual
